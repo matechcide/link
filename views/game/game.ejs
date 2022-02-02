@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/public/images/logo.png"/>
+    <link rel="stylesheet" href="/public/css/<%= modules %>/<%= page %>.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <% scripts.forEach((script) => { %>
+        <script src="/public/js/<%= script %>.js"></script>
+    <% }); %>
+    <title><%= title %></title>
+</head>
+<body>
+    <canvas id="plateau" class="plateau" width="832" height="832"></canvas>
+    <canvas id="Arbre" class="Arbre" width="832" height="832"></canvas>
+    <canvas id="item" class="item" width="832" height="32"></canvas>
+    <div id="player" class="multie"></div>
+    <label>Utiliser les touche shift, Z, Q, S, D et la barre d'espace pour jouer.</label>
+    <script src="/public/js/<%= modules %>/loadImg.js"></script>
+    <script src="/public/js/<%= modules %>/loadPlateau.js"></script>
+    <script src="/public/js/<%= modules %>/<%= page %>.js"></script>
+    <script src="/public/js/<%= modules %>/move.js"></script>
+    <script src="/public/js/<%= modules %>/arbre.js"></script>
+</body>
+</html>
